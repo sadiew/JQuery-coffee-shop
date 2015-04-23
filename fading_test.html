@@ -45,29 +45,35 @@
 </div>
 
 <script>
-
-    var myRevenueMessage = document.getElementById("revenue");
     
     $("img#coffee_image").attr("src", "static/coffee_beans.jpg");
 
     $("img#coffee_image").on('click', makeCoffee);
 
-    function makeCoffee(evt) {
-        //$("img#coffee_image").fadeOut(5000)
+
+    function makeCoffee(evt) {        
+        setTimeout(showCoffeeMachine, 500);        
+        setTimeout(showCoffeeMug, 4000);
+        setTimeout(showCoffeeBeans, 4000);
+    }
+
+    function showCoffeeMachine(evt) {
+        $("img#coffee_image").fadeOut(2000);
         $("img#coffee_image").attr("src", "static/coffee_machine.jpg");
-        $("img#coffee_image").fadeOut(1000)
-        setTimeout(showCoffeeMug, 1000);
-        $("img#coffee_image").fadeIn(2500)
-        setTimeout(showCoffeeBeans, 2500);
+        $("img#coffee_image").fadeIn(2000);
+        
     }
 
     function showCoffeeMug(evt) {
-
+        $("img#coffee_image").fadeOut(2000);
         $("img#coffee_image").attr("src", "static/coffee_mug.jpg");
+        $("img#coffee_image").fadeIn(2000);
    }
 
     function showCoffeeBeans(evt) {
+        $("img#coffee_image").fadeOut(2000);
         $("img#coffee_image").attr("src", "static/coffee_beans.jpg");
+        $("img#coffee_image").fadeIn(2000);
     }
 
 
